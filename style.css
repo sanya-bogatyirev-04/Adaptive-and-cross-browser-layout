@@ -165,13 +165,18 @@ button:disabled {
     }
 
     textarea {
-        width: 97%;
+        width: 96%;
     }
 
 
 }
 
 @media (min-width: 1024px) {
+
+    textarea {
+        width: 94%;
+    }
+
     #form-container {
         flex-direction: row;
         gap: 40px;

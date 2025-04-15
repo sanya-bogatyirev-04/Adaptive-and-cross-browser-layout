@@ -1,10 +1,10 @@
 function check() {
     if (
-      document.getElementById("user_name") === "" ||
-      document.getElementById("email") === ""
+      document.getElementById("form-user-name") === "" ||
+      document.getElementById("form-user-email") === "" 
     ) {
-      document.getElementById("add_picture").disabled = 1;
+      document.getElementById("button-add-picture").disabled = 1;
     } else {
-      document.getElementById("add_picture").disabled = 0;
+      document.getElementById("button-add-picture").disabled = 0;
     }
   }
