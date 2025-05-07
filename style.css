@@ -3,6 +3,7 @@
     --dark-green: rgb(3, 59, 3);
     --light-green: rgb(24, 94, 24);
     --background-color: rgba(89, 124, 90, 0.822);
+    --background-colore-button: rgb(168, 206, 237);
     --border-radius: 30px;
     --border-color: var(--dark-green);
     --text-color: white;
@@ -67,6 +68,12 @@ header {
     width: 300px;
     height: 300px;
     object-fit: contain;
+    transition: all 0.4s ease-in-out;
+}
+
+#form-picture-user:hover{
+    transform: scale(1.05);
+    background: var(--dark-green);
 }
 
 #div-form-user-info {
@@ -74,6 +81,19 @@ header {
     flex-direction: column;
     gap: 20px;
 }
+
+#form-user-name, 
+#form-user-email, 
+#form-picture-user-text{
+    transition: all 0.4s ease-in-out;
+}
+
+#form-user-name:hover, 
+#form-user-email:hover, 
+#form-picture-user-text:hover{
+    background: var(--background-colore-button);
+}
+
 
 .input-row {
     display: flex;
@@ -116,7 +136,7 @@ button {
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.4s ease-in-out;
 }
 
 button:hover {
@@ -167,8 +187,6 @@ button:disabled {
     textarea {
         width: 96%;
     }
-
-
 }
 
 @media (min-width: 1024px) {
