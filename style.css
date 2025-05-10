@@ -1,8 +1,8 @@
 :root {
-    --dark-red: rgb(78, 5, 5);
-    --dark-green: rgb(3, 59, 3);
-    --light-green: rgb(24, 94, 24);
-    --background-color: rgba(89, 124, 90, 0.822);
+    --dark-red: #FFC440;
+    --dark-green: #e4a51e;
+    --light-green: #ffd373;
+    --background-color: #FFB000;
     --background-colore-button: rgb(168, 206, 237);
     --border-radius: 30px;
     --border-color: var(--dark-green);
