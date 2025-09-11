@@ -19,7 +19,7 @@ function check() {
       const dataContainer = document.getElementById('user-data-display');
       
       if (!name && !email && !description) {
-        dataContainer.innerHTML = '<p>Нет данных для отображения</p>';
+        dataContainer.innerHTML = '<p>No data for show</p>';
         dataContainer.style.display = 'block';
         return;
       }
