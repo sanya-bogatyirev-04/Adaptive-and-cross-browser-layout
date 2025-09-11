@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Infant:ital,wght@0,300..700;1,300..700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style_2.css" />
   <link rel="shortcut icon" href="https://static.tildacdn.com/tild6463-6639-4636-a131-323534663232/favicon.ico"
     type="image/x-icon" />
 
@@ -23,38 +24,10 @@
   </header>
 
   <main>
-    <img src="./XOsX.gif" class="gus" />
     <form method="post" action="/login" id="form-container">
-      <div id="div-form-user-picture">
-        <input onclick="openNewPage()" type="image" id="form-picture-user" name="form-picture-user"
-          src="./dontFound.png" />
-      </div>
-
-      <div id="div-form-user-info">
-        <div class="input-row">
-          <input type="text" id="form-user-name" oninput="check()" name="form-user-name" placeholder="Your name"
-            required />
-          <input type="email" id="form-user-email" oninput="check()" name="form-user-email" placeholder="Your email"
-            required />
+        <div class="end">
+            <text>Your information is save</text>
         </div>
-
-        <textarea id="form-picture-user-text" name="form-picture-user-text" rows="10"
-          placeholder="Add a description..."></textarea>
-
-        <div class="button-row">
-          <button onclick="openInNewTab()" type="submit" id="button-add-picture" disabled>
-            Add picture
-          </button>
-          <script>
-            function openInNewTab() {
-                window.open('index_2.html', '_blank');
-            }
-          </script>
-          <button type="reset" id="button-del-user-info">
-            Delete my data
-          </button>
-        </div>
-      </div>
     </form>
 
     <section class="list-section">
