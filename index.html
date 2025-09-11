@@ -16,6 +16,9 @@
 </head>
 
 <body>
+
+<div id="container"></div>
+
   <header>
     <h1 class="start-title">
       <div class="start-title-text">Loading new images website</div>
@@ -32,13 +35,13 @@
 
       <div id="div-form-user-info">
         <div class="input-row">
-          <input type="text" id="form-user-name" oninput="check()" name="form-user-name" placeholder="Your name"
+          <input type="text" id="form-user-name" oninput="check()" onchange="show_name()" name="form-user-name" placeholder="Your name"
             required />
-          <input type="email" id="form-user-email" oninput="check()" name="form-user-email" placeholder="Your email"
+          <input type="email" id="form-user-email" oninput="check()" onchange="show_email()" name="form-user-email" placeholder="Your email"
             required />
         </div>
 
-        <textarea id="form-picture-user-text" name="form-picture-user-text" rows="10"
+        <textarea id="form-picture-user-text" name="form-picture-user-text" onchange="show_text()" rows="10"
           placeholder="Add a description..."></textarea>
 
         <div class="button-row">
@@ -53,7 +56,11 @@
           <button type="reset" id="button-del-user-info">
             Delete my data
           </button>
+          <button type="button" onclick="showUserData()" id="button-show-picture" disabled>
+            Show data
+          </button>
         </div>
+        <div id="user-data-display" style="display: none;" class="user-data-container"></div>
       </div>
     </form>
 

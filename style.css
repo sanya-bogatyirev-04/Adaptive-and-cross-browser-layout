@@ -1,6 +1,6 @@
 :root {
     --dark-red: #FFC440;
-    --dark-green: #e4a51e;
+    --dark-green: #e9b407;
     --light-green: #ffd373;
     --background-color: #FFB000;
     --background-colore-button: rgb(168, 206, 237);
@@ -94,6 +94,13 @@ header {
     background: var(--background-colore-button);
 }
 
+#user-data-display{
+    background: rgb(230, 141, 8);
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 20%;
+}
 
 .input-row {
     display: flex;
@@ -141,6 +148,10 @@ button {
 
 button:hover {
     background-color: var(--dark-green);
+}
+
+#button-del-user-info:hover{
+    background-color: red;
 }
 
 button:disabled {
