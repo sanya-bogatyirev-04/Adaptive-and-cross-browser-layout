@@ -29,20 +29,26 @@
     <img src="./XOsX.gif" class="gus" />
     <form method="post" action="/login" id="form-container">
       <div id="div-form-user-picture">
-        <input onclick="openNewPage()" type="image" id="form-picture-user" name="form-picture-user"
+        <input type="image" id="form-picture-user" name="form-picture-user"
           src="./dontFound.png" />
       </div>
 
       <div id="div-form-user-info">
         <div class="input-row">
-          <input type="text" id="form-user-name" oninput="check()" onchange="show_name()" name="form-user-name" placeholder="Your name"
+          <input type="text" id="form-user-name" oninput="check()" name="form-user-name" placeholder="Your name"
             required />
-          <input type="email" id="form-user-email" oninput="check()" onchange="show_email()" name="form-user-email" placeholder="Your email"
+          <input type="email" id="form-user-email" oninput="check()" name="form-user-email" placeholder="Your email"
             required />
         </div>
 
-        <textarea id="form-picture-user-text" name="form-picture-user-text" onchange="show_text()" rows="10"
+        <textarea id="form-picture-user-text" name="form-picture-user-text" rows="10"
           placeholder="Add a description..."></textarea>
+
+        <div id="checkbox">
+          <input type="checkbox" id="newsletter" name="newsletter" value="subscribe">
+          <label id="textNewsletter" for="textNewsletter">Subscribe to the newsletter</label>
+        </div>
+        
 
         <div class="button-row">
           <button onclick="openInNewTab()" type="submit" id="button-add-picture" disabled>

@@ -15,10 +15,11 @@ function check() {
       const name = document.getElementById('form-user-name').value;
       const email = document.getElementById('form-user-email').value;
       const description = document.getElementById('form-picture-user-text').value;
+      const checkData = document.getElementById('newsletter').value
       
       const dataContainer = document.getElementById('user-data-display');
       
-      if (!name && !email && !description) {
+      if (!name && !email && !description && !checkData) {
         dataContainer.innerHTML = '<p>No data for show</p>';
         dataContainer.style.display = 'block';
         return;
@@ -36,6 +37,10 @@ function check() {
       
       if (description) {
         html += `<div class="user-data-item"><span class="user-data-label">Description:</span> ${description}</div>`;
+      }
+
+      if(checkData) {
+        html += `<div class="user-data-item"><span class="user-data-label">CheckBox:</span> ${checkData}</div>`;
       }
       
       dataContainer.innerHTML = html;

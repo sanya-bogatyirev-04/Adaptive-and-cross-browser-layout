@@ -102,6 +102,20 @@ header {
     border-radius: 20%;
 }
 
+#checkbox{
+    text-align:left;
+}
+
+#newsletter{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#textNewsletter{
+    font-size: 20px;
+}
+
 .input-row {
     display: flex;
     flex-direction: column;
