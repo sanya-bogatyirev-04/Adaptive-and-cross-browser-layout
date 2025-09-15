@@ -55,6 +55,13 @@ header {
     box-sizing: border-box;
 }
 
+#div-chooseLang,
+#btnLang{
+    text-align: center;
+    width: 100px;
+    height: 80px;
+}
+
 #div-form-user-picture {
     display: flex;
     justify-content: center;
@@ -82,14 +89,14 @@ header {
     gap: 20px;
 }
 
-#form-user-name, 
-#form-user-email, 
+#input-row-name, 
+#input-row-email, 
 #form-picture-user-text{
     transition: all 0.4s ease-in-out;
 }
 
-#form-user-name:hover, 
-#form-user-email:hover, 
+#input-row-name:hover, 
+#input-row-email:hover, 
 #form-picture-user-text:hover{
     background: var(--background-colore-button);
 }
@@ -106,6 +113,17 @@ header {
     text-align:left;
 }
 
+#personal-info{
+    display: flex;
+    gap: 20px;
+}
+
+#input-row-name,
+#input-row-email{
+    flex: 1;
+}
+
+
 #newsletter{
     width: 20px;
     height: 20px;
@@ -116,7 +134,7 @@ header {
     font-size: 20px;
 }
 
-.input-row {
+#personal-info {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -245,7 +263,7 @@ button:disabled {
 }
 
 @media (min-width: 540px) {
-    .input-row {
+    #personal-info {
         flex-direction: row;
     }
 
@@ -283,7 +301,7 @@ button:disabled {
         max-height: 500px;
     }
 
-    .input-row {
+    #personal-info {
         flex-direction: row;
     }
 

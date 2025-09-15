@@ -21,13 +21,16 @@
 
   <header>
     <h1 class="start-title">
-      <div class="start-title-text">Loading new images website</div>
+      <div id="start-title-text" class="start-title-text">Loading new images website</div>
     </h1>
   </header>
 
   <main>
     <img src="./XOsX.gif" class="gus" />
     <form id="form-container">
+      <div id="div-chooseLang">
+        <button id="btnLang">Language</button>
+      </div>
       <div id="div-form-user-picture">
         <input type="image" id="form-picture-user" name="form-picture-user"
           src="./dontFound.png" />
@@ -62,34 +65,124 @@
           </button>
         </div>
         <div id="user-data-display" class="user-data-container">
-          <h3>Your data:</h3>
-          <div class="user-data-item"><span class="user-data-label">Name:</span></div>
-          <div class="user-data-item"><span class="user-data-label">Email:</span></div>
-          <div class="user-data-item"><span class="user-data-label">Description:</span></div>
-          <div class="user-data-item"><span class="user-data-label">Newsletter:</span></div>
+          <h3 id="head-data">Your data:</h3>
+          <div id="user-data-name" class="user-data-item"><span class="user-data-label">Name:</span></div>
+          <div id="user-data-email" class="user-data-item"><span class="user-data-label">Email:</span></div>
+          <div id="user-data-description" class="user-data-item"><span class="user-data-label">Description:</span></div>
+          <div id="user-data-newsletter" class="user-data-item"><span class="user-data-label">Newsletter:</span></div>
         </div>
       </div>
     </form>
 
-    <h3>Your data:</h3>
-    <div class="user-data-item"><span class="user-data-label">Name:</span></div>
-
-    <section class="list-section">
-      <h3 class="name-of-list">What do we want?</h3>
+    <section id="list-section" class="list-section">
+      <h3 id="name-of-list" class="name-of-list">What do we want?</h3>
       <ol class="list-content">
-        <li>Beautiful picture</li>
-        <li>More beautiful picture</li>
+        <li id="p1">Beautiful picture</li>
+        <li id="p2">More beautiful picture</li>
       </ol>
     </section>
   </main>
 
-  <footer class="containerPs">
+  <footer id="containerPs" class="containerPs">
     <p class="ps">
       Thank for using my website<a class="my_name">(by Aleksander)</a>
     </p>
   </footer>
 
-  <script src="./script.js"></script>
+  <script async
+          src="https://unpkg.com/i18next@25.5.2/dist/umd/i18next.min.js">
+  </script>
+  <script async
+          src="./script.js">
+  </script>
+
+  <script>
+    const btn = document.getElementById("btnLang");
+
+    const output = (err, t) => {
+      if (err) {
+        return console.log('something went wrong loading', err);
+      }
+      btn.innerHTML = t('btnLang');
+      document.getElementById('start-title-text').innerHTML = t('start-title-text');
+      document.getElementById('form-user-name').innerHTML = t('form-user-name');
+      document.getElementById('form-user-email').innerHTML = t('form-user-email');
+      document.getElementById('form-picture-user-text').innerHTML = t('form-picture-user-text');
+      document.getElementById('textNewsletter').innerHTML = t('textNewsletter');
+      document.getElementById('button-add-picture').innerHTML = t('button-add-picture');
+      document.getElementById('button-del-user-info').innerHTML = t('button-del-user-info');
+      document.getElementById('button-show-picture').innerHTML = t('button-show-picture');
+      document.getElementById('head-data').innerHTML = t('head-data');
+      document.getElementById('user-data-name').innerHTML = t('user-data-name');
+      document.getElementById('user-data-email').innerHTML = t('user-data-email');
+      document.getElementById('user-data-description').innerHTML = t('user-data-description');
+      document.getElementById('user-data-newsletter').innerHTML = t('user-data-newsletter');
+      document.getElementById('name-of-list').innerHTML = t('name-of-list');
+      document.getElementById('p1').innerHTML = t('p1');
+      document.getElementById('p2').innerHTML = t('p2');
+      document.getElementById('containerPs').innerHTML = t('containerPs');
+    };
+
+    i18next.init({
+    lng: 'en',
+    fallbackLng: ["es", "ru"],
+    resources: {
+      en: {
+        translation: {
+          "btnLang": "Language",
+          "start-title-text": "Loading new images website",
+          "form-user-name": "Your name",
+          "form-user-email": "Your email",
+          "form-picture-user-text": "Add a description...",
+          "textNewsletter": "Subscribe to the newsletter",
+          "button-add-picture": "Add picture",
+          "button-del-user-info": "Delete my data",
+          "button-show-picture": "Show data",
+          "head-data": "Your data:",
+          "user-data-name": "Name:",
+          "user-data-email": "Email:",
+          "user-data-description": "Description:",
+          "user-data-newsletter": "Newsletter:",
+          "name-of-list": "What do we want?",
+          "p1": "Beautiful picture",
+          "p2": "More beautiful picture",
+          "containerPs": "Thank for using my website(by Aleksander)",
+        }
+      },
+      ru: {
+        translation: {
+          "btnLang": "Язык",
+          "start-title-text": "Загрузка новых картинок",
+          "form-user-name": "Ваше имя",
+          "form-user-email": "Ваша почта",
+          "form-picture-user-text": "Добавьте описание...",
+          "textNewsletter": "Соглашение на рассылку",
+          "button-add-picture": "Добавить картинку",
+          "button-del-user-info": "Удалить мои данные",
+          "button-show-picture": "Показать данные",
+          "head-data": "Ваши данные:",
+          "user-data-name": "Имя:",
+          "user-data-email": "Почта:",
+          "user-data-description": "Описание:",
+          "user-data-newsletter": "Рассылка:",
+          "name-of-list": "Что мы хотим?",
+          "p1": "Красивых картин",
+          "p2": "Больше красивых каритин",
+          "containerPs": "Спасибо, что используете мой сайт (сделано Александром)",
+        }
+      }
+    }
+  },
+  output 
+  );
+  
+  
+  btn.onclick = () =>{
+    const lang = i18next.language === "en" ? "ru" : "en";
+    i18next.changeLanguage(lang, output);
+  }
+
+  </script>
 </body>
 
 </html>
