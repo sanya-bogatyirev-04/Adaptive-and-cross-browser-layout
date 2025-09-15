@@ -27,7 +27,7 @@
 
   <main>
     <img src="./XOsX.gif" class="gus" />
-    <form method="post" action="/login" id="form-container">
+    <form id="form-container">
       <div id="div-form-user-picture">
         <input type="image" id="form-picture-user" name="form-picture-user"
           src="./dontFound.png" />
@@ -35,9 +35,9 @@
 
       <div id="div-form-user-info">
         <div class="input-row">
-          <input type="text" id="form-user-name" oninput="check()" name="form-user-name" placeholder="Your name"
+          <input type="text" id="form-user-name" name="form-user-name" placeholder="Your name"
             required />
-          <input type="email" id="form-user-email" oninput="check()" name="form-user-email" placeholder="Your email"
+          <input type="email" id="form-user-email" name="form-user-email" placeholder="Your email"
             required />
         </div>
 
@@ -51,24 +51,28 @@
         
 
         <div class="button-row">
-          <button onclick="openInNewTab()" type="submit" id="button-add-picture" disabled>
+          <button type="submit" id="button-add-picture" disabled>
             Add picture
           </button>
-          <script>
-            function openInNewTab() {
-                window.open('index_2.html', '_blank');
-            }
-          </script>
           <button type="reset" id="button-del-user-info">
             Delete my data
           </button>
-          <button type="button" onclick="showUserData()" id="button-show-picture" disabled>
+          <button type="button" id="button-show-picture" disabled>
             Show data
           </button>
         </div>
-        <div id="user-data-display" style="display: none;" class="user-data-container"></div>
+        <div id="user-data-display" class="user-data-container">
+          <h3>Your data:</h3>
+          <div class="user-data-item"><span class="user-data-label">Name:</span></div>
+          <div class="user-data-item"><span class="user-data-label">Email:</span></div>
+          <div class="user-data-item"><span class="user-data-label">Description:</span></div>
+          <div class="user-data-item"><span class="user-data-label">Newsletter:</span></div>
+        </div>
       </div>
     </form>
+
+    <h3>Your data:</h3>
+    <div class="user-data-item"><span class="user-data-label">Name:</span></div>
 
     <section class="list-section">
       <h3 class="name-of-list">What do we want?</h3>
@@ -85,7 +89,7 @@
     </p>
   </footer>
 
-  <script src="./index.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>
